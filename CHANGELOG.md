@@ -1,3 +1,2 @@
-## [0.0.1] - TODO: Add release date.
-
-* TODO: Describe initial release.
+## [0.0.1] - 02/06/2020
+* First version of the spider chart library
