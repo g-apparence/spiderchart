@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:spiderchart/chart_painter.dart';
-import 'package:spiderchart/spiderchart.dart';
+import 'package:awesome_spiderchart/chart_painter.dart';
+import 'package:awesome_spiderchart/spiderchart.dart';
 
 void main() => runApp(MyApp());
 

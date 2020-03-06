@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:spiderchart/label_painter.dart';
-import 'package:spiderchart/spiderchart.dart';
+import 'spiderchart.dart';
+import 'label_painter.dart';
 
 class LabelWidget extends StatelessWidget {
 

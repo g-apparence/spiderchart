@@ -1,12 +1,11 @@
 library spiderchart;
 
 import 'package:flutter/material.dart';
-import 'package:spiderchart/chart_painter.dart';
-import 'package:spiderchart/label_painter.dart';
+import 'chart_painter.dart';
 import 'dart:ui' as ui;
 
-import 'package:spiderchart/label_widget.dart';
-import 'package:spiderchart/pointer_widget.dart';
+import 'label_widget.dart';
+import 'pointer_widget.dart';
 
 class SpiderChartStatModel {
   ui.Image image;

@@ -1,8 +1,8 @@
-name: spiderchart
+name: awesome_spiderchart
 description: A radar charts
 version: 0.0.1
-author:
-homepage:
+homepage: https://apparence.io
+repository: https://github.com/g-apparence/spiderchart
 
 environment:
   sdk: ">=2.6.0 <3.0.0"
