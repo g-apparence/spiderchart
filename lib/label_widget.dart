@@ -3,13 +3,19 @@ import 'spiderchart.dart';
 import 'label_painter.dart';
 
 class LabelWidget extends StatelessWidget {
+  final int index;
+  final int nbSides;
+  final Color lineColor;
+  final bool drawCicle;
+  final SpiderChartStatModel statModel;
 
-  int index;
-  int nbSides;
-  Color lineColor;
-  SpiderChartStatModel statModel;
-
-  LabelWidget({this.index, this.nbSides, this.lineColor, this.statModel});
+  LabelWidget({
+    this.index,
+    this.nbSides,
+    this.lineColor,
+    this.drawCicle = false,
+    this.statModel,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +26,8 @@ class LabelWidget extends StatelessWidget {
         sideIndex: index,
         label: statModel.label,
         nbSides: nbSides,
+        drawCircle: drawCicle,
       ),
     );
   }
-
 }
