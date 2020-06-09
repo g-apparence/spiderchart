@@ -143,7 +143,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       activeLabelColor: Colors.red,
       nbSides: 12,
       borderPaintingStyle: PaintingStyle.fill,
-      borderOrFillColor: Color(0xfff1ec2),
+      borderOrFillColor: Color(0xfff1ece2),
+      drawSteps: false,
       labels: [
         SpiderChartStatModel(roundSize: 0, label: Text("test 1")),
         SpiderChartStatModel(roundSize: 0, label: Text("test 2")),

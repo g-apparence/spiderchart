@@ -10,15 +10,17 @@ class SpiderChartLabelDrawer extends CustomPainter {
   final Text label;
   final Color lineColor;
   final PositionListener positionListener;
+  final bool drawCircle;
   Offset labelCenter;
 
   SpiderChartLabelDrawer({
     this.label,
     @required this.nbSides,
     @required this.sideIndex,
-    @required this.roundSize,
-    @required this.lineColor,
     this.positionListener,
+    this.roundSize,
+    this.lineColor,
+    this.drawCircle,
   });
 
   @override
@@ -31,7 +33,9 @@ class SpiderChartLabelDrawer extends CustomPainter {
     var paneSize = size.width / 2 - 32;
     var center = Offset(size.width / 2, size.height / 2);
     labelCenter = center.rotate(paneSize, nbSides, sideIndex);
-    canvas.drawCircle(labelCenter, roundSize, linePainter);
+    if (drawCircle) {
+      canvas.drawCircle(labelCenter, roundSize, linePainter);
+    }
     if (this.positionListener != null) {
       this.positionListener(labelCenter);
     }

@@ -30,15 +30,12 @@ class SpiderChartDrawer extends CustomPainter {
     this.valuesList,
     this.drawSteps = true,
     this.borderPaintingStyle = PaintingStyle.stroke,
-    this.borderStrokeWidth = 2,
-    this.borderOrFillColor = Colors.red,
+    this.borderStrokeWidth,
+    this.borderOrFillColor,
   });
 
   @override
   void paint(Canvas canvas, Size size) {
-    // if (borderPaintingStyle == PaintingStyle.fill && borderOrFillColor == null) {
-    //   borderOrFillColor =
-    // }
     var linePainter = Paint()
       ..style = PaintingStyle.stroke
       ..color = this.lineColor
@@ -47,12 +44,12 @@ class SpiderChartDrawer extends CustomPainter {
 
     var borderPainter = Paint()
       ..style = borderPaintingStyle
-      ..color = borderOrFillColor
-      ..strokeWidth = borderStrokeWidth
+      ..color = Color(0xfff1ece2)
+      ..strokeWidth = 2
       ..isAntiAlias = true;
     // draw spider
     var center = Offset(size.width / 2, size.height / 2);
-    var paneSize = size.width / 2 - 32;
+    var paneSize = size.width / 2 - 44;
     canvas.drawCircle(center, 2, linePainter);
     var points = _drawPentagon(center, paneSize, canvas, borderPainter);
     var step = paneSize / 6;

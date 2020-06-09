@@ -26,6 +26,7 @@ class SpiderChartWidget extends StatefulWidget {
   final PaintingStyle borderPaintingStyle;
   final double borderStrokeWidth;
   final Color borderOrFillColor;
+  final bool drawSteps;
 
   SpiderChartWidget({
     Key key,
@@ -36,9 +37,10 @@ class SpiderChartWidget extends StatefulWidget {
     this.onTap,
     this.activeLabel = -1,
     this.activeLabelColor,
-    this.borderPaintingStyle,
-    this.borderStrokeWidth,
-    this.borderOrFillColor,
+    this.borderPaintingStyle = PaintingStyle.fill,
+    this.borderStrokeWidth = 2,
+    this.borderOrFillColor = const Color(0xfff1ece2),
+    this.drawSteps = true,
   }) : super(key: key) {
     assert(
       nbSides <= labels.length,
@@ -124,7 +126,7 @@ class _SpiderChartWidgetState extends State<SpiderChartWidget> with SingleTicker
                 sideIndex: widget.activeLabel,
                 nbSides: widget.nbSides,
                 color: Colors.white,
-                gradient: new RadialGradient(
+                gradient: RadialGradient(
                   radius: .5,
                   colors: <Color>[
                     Colors.lightGreenAccent.withOpacity(0),
@@ -157,6 +159,7 @@ class _SpiderChartWidgetState extends State<SpiderChartWidget> with SingleTicker
           borderPaintingStyle: widget.borderPaintingStyle,
           borderStrokeWidth: widget.borderStrokeWidth,
           borderOrFillColor: widget.borderOrFillColor,
+          drawSteps: widget.drawSteps,
         ),
       ),
     );
