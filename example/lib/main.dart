@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   _buildSpiderChartWidget(Gradient gradient) {
     return SpiderChartWidget(
       lineColor: Colors.blueGrey[500],
-      activeLabelColor: Colors.blueGrey[50],
+      activeLabelColor: Colors.white,
       nbSides: 5,
       labels: [
         SpiderChartStatModel(roundSize: 4, label: "test 1"),

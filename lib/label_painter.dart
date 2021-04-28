@@ -11,7 +11,7 @@ class SpiderChartLabelDrawer extends CustomPainter {
   final int nbSides, sideIndex;
   final double roundSize;
   final String label;
-  final Color lineColor;
+  final Color lineColor, activeLabelColor;
   final PositionListener positionListener;
   Offset labelCenter;
 
@@ -22,6 +22,7 @@ class SpiderChartLabelDrawer extends CustomPainter {
     @required this.sideIndex,
     @required this.roundSize,
     @required this.lineColor,
+    @required this.activeLabelColor,
     this.positionListener
   });
 
@@ -41,7 +42,7 @@ class SpiderChartLabelDrawer extends CustomPainter {
     }
     if(label != null) {
       var labelPainterCenter = center.rotate(paneSize + 4, nbSides, sideIndex);
-      var textStyle = TextStyle(color: Colors.white);
+      var textStyle = TextStyle(color: this.activeLabelColor);
       var textSpan = TextSpan(text: label, style: textStyle,);
       var textPainter = TextPainter(text: textSpan, textDirection: TextDirection.ltr, textAlign: TextAlign.center);
       textPainter.layout();

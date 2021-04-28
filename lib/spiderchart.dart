@@ -100,7 +100,7 @@ class _SpiderChartWidgetState extends State<SpiderChartWidget> with SingleTicker
             return widget.activeLabel == i ? PointerWidget(
               sideIndex: widget.activeLabel,
               nbSides: widget.nbSides,
-              color: Colors.white,
+              color:  Colors.white,
               gradient: new RadialGradient(
                 radius: .5,
                 colors: <Color>[
@@ -114,6 +114,7 @@ class _SpiderChartWidgetState extends State<SpiderChartWidget> with SingleTicker
           child: LabelWidget(
             index: i,
             lineColor: widget.lineColor,
+            activeLabelColor: widget.activeLabelColor,
             nbSides: widget.nbSides,
             statModel: widget.labels[i],
           ),
